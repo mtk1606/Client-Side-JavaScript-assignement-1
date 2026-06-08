@@ -1,9 +1,10 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
- 
+
 body {
   background: #000;
   color: #00ff88;
@@ -13,13 +14,13 @@ body {
   align-items: center;
   padding: 40px 20px;
 }
- 
+
 h1 {
   font-size: 2rem;
   letter-spacing: 0.3em;
   margin-bottom: 40px;
 }
- 
+
 .builder {
   border: 1px solid #00ff88;
   padding: 30px 40px;
@@ -27,7 +28,7 @@ h1 {
   max-width: 600px;
   margin-bottom: 24px;
 }
- 
+
 .row {
   display: flex;
   align-items: center;
@@ -35,18 +36,56 @@ h1 {
   padding: 10px 0;
   border-bottom: 1px solid #003322;
 }
- 
+
 .row:last-child {
   border-bottom: none;
 }
- 
+
 .label {
   width: 160px;
   font-size: 0.85rem;
   opacity: 0.7;
 }
- 
+
 .value {
   font-size: 0.9rem;
   flex: 1;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: background 0.15s, color 0.15s;
+}
+
+button:hover {
+  background: #00ff88;
+  color: #000;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.actions button {
+  padding: 10px 20px;
+  font-size: 0.8rem;
+}
+
+#warning {
+  color: #ff4444;
+  font-size: 0.8rem;
+  min-height: 20px;
+  margin-bottom: 16px;
+  text-align: center;
 }
