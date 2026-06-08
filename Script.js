@@ -13,7 +13,6 @@ var weaponIndex = -1;
 var objectiveIndex = -1;
 var riskIndex = -1;
  
-// cycles through the array for whatever key is passed in
 function cycleOption(key) {
   if (key === "agent") {
     agentIndex = (agentIndex + 1) % agentOptions.length;
@@ -35,4 +34,33 @@ function cycleOption(key) {
     riskIndex = (riskIndex + 1) % riskOptions.length;
     document.getElementById("val-risk").textContent = riskOptions[riskIndex];
   }
+}
+ 
+// checks all 5 are selected, then shows the briefing
+function launchMission() {
+  var warning = document.getElementById("warning");
+ 
+  // make sure every category has been chosen
+  if (agentIndex < 0 || locationIndex < 0 || weaponIndex < 0 || objectiveIndex < 0 || riskIndex < 0) {
+    warning.textContent = "Please select all mission parameters before launching.";
+    return;
+  }
+ 
+  warning.textContent = "";
+ 
+  var agent = agentOptions[agentIndex];
+  var location = locationOptions[locationIndex];
+  var weapon = weaponOptions[weaponIndex];
+  var objective = objectiveOptions[objectiveIndex];
+  var risk = riskOptions[riskIndex];
+ 
+  var content = document.getElementById("briefingContent");
+  content.innerHTML =
+    "<p class='briefing-line'>Agent: " + agent + "</p>" +
+    "<p class='briefing-line'>Location: " + location + "</p>" +
+    "<p class='briefing-line'>Weapon: " + weapon + "</p>" +
+    "<p class='briefing-line'>Objective: " + objective + "</p>" +
+    "<p class='briefing-line'>Risk: " + risk + "</p>";
+ 
+  document.getElementById("briefing").style.display = "block";
 }
