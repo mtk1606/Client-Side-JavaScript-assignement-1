@@ -20,3 +20,33 @@ h1 {
   margin-bottom: 40px;
 }
  
+.builder {
+  border: 1px solid #00ff88;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+ 
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #003322;
+}
+ 
+.row:last-child {
+  border-bottom: none;
+}
+ 
+.label {
+  width: 160px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+ 
+.value {
+  font-size: 0.9rem;
+  flex: 1;
+}
