@@ -1,4 +1,5 @@
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,12 +14,14 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+  min-height: 100vh;
 }
 
 h1 {
   font-size: 2rem;
   letter-spacing: 0.3em;
   margin-bottom: 40px;
+  text-shadow: 0 0 10px #00ff88;
 }
 
 .builder {
@@ -88,4 +91,24 @@ button:hover {
   min-height: 20px;
   margin-bottom: 16px;
   text-align: center;
+}
+
+.briefing {
+  display: none;
+  border: 1px solid #00ff88;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.briefing h2 {
+  letter-spacing: 0.3em;
+  margin-bottom: 24px;
+  text-shadow: 0 0 10px #00ff88;
+}
+
+.briefing-line {
+  font-size: 0.95rem;
+  line-height: 2;
 }
