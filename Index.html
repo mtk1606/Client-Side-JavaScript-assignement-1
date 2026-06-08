@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mission Control</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>MISSION CONTROL</h1>
+
+  <div class="builder">
+
+    <div class="row">
+      <span class="label">Agent Type</span>
+      <button onclick="cycleOption('agent')">CYCLE</button>
+      <span class="value" id="val-agent">---</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Location</span>
+      <button onclick="cycleOption('location')">CYCLE</button>
+      <span class="value" id="val-location">---</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Weapon Loadout</span>
+      <button onclick="cycleOption('weapon')">CYCLE</button>
+      <span class="value" id="val-weapon">---</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Objective</span>
+      <button onclick="cycleOption('objective')">CYCLE</button>
+      <span class="value" id="val-objective">---</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Risk Level</span>
+      <button onclick="cycleOption('risk')">CYCLE</button>
+      <span class="value" id="val-risk">---</span>
+    </div>
+
+  </div>
+
+  <div class="actions">
+    <button onclick="launchMission()">LAUNCH MISSION</button>
+    <button onclick="randomMission()">RANDOM MISSION</button>
+    <button onclick="resetMission()">RESET</button>
+  </div>
+
+  <p id="warning"></p>
+
+  <div class="briefing" id="briefing">
+    <h2>MISSION BRIEFING</h2>
+    <div id="briefingContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
